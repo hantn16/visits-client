@@ -1,14 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Provider } from 'react-redux';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-export default function App() {
+import { store } from './src/app/store';
+import CounterScreen from './src/features/counter/CounterScreen';
+import { visitNavigator } from './src/features/visit/visitNavigator';
+import { contactNavigator } from './src/features/contact/contactNavigator';
+
+const navigator = createBottomTabNavigator(
+  {
+    Visit: visitNavigator,
+    Contact: contactNavigator,
+    Counter: CounterScreen,
+  },
+  {
+    initialRouteName: 'Visit',
+  }
+);
+const App = createAppContainer(navigator);
+export default () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <App />
+    </Provider>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
