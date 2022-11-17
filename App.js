@@ -9,12 +9,14 @@ import { store } from './src/app/store';
 import CounterScreen from './src/features/counter/CounterScreen';
 import { visitNavigator } from './src/features/visit/visitNavigator';
 import { contactNavigator } from './src/features/contact/contactNavigator';
+import { eventNavigator } from './src/features/event/eventNavigator';
 
 const navigator = createBottomTabNavigator(
   {
     Visit: visitNavigator,
     Contact: contactNavigator,
     Counter: CounterScreen,
+    Event: eventNavigator,
   },
   {
     initialRouteName: 'Visit',
