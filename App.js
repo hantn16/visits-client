@@ -10,6 +10,8 @@ import CounterScreen from './src/features/counter/CounterScreen';
 import { visitNavigator } from './src/features/visit/visitNavigator';
 import { contactNavigator } from './src/features/contact/contactNavigator';
 import { eventNavigator } from './src/features/event/eventNavigator';
+import { allCodeNavigator } from './src/features/allCode/allCodeNavigator';
+import { relationshipNavigator } from './src/features/relationship/relationshipNavigator';
 
 const navigator = createBottomTabNavigator(
   {
@@ -17,6 +19,8 @@ const navigator = createBottomTabNavigator(
     Contact: contactNavigator,
     Counter: CounterScreen,
     Event: eventNavigator,
+    AllCode: allCodeNavigator,
+    Relationship: relationshipNavigator,
   },
   {
     initialRouteName: 'Visit',

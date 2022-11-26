@@ -1,10 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import React from 'react';
 
-const AllCodeScreen = () => {
+const AllCodeScreen = ({ navigation }) => {
   return (
     <View>
       <Text>AllCodeScreen</Text>
+      <Button
+        title="Chuyển sang trang Detail"
+        onPress={() => {
+          navigation.navigate('AllCodeDetail');
+        }}
+      />
     </View>
   );
 };
