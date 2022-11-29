@@ -4,6 +4,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
+    "db": "json-server --watch db.json",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
@@ -15,6 +16,7 @@
     "axios": "^1.2.0",
     "expo": "~47.0.5",
     "expo-status-bar": "~1.4.2",
+    "json-server": "^0.17.1",
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-native-element-dropdown": "^2.4.0",

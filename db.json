@@ -1,0 +1,22 @@
+{
+  "allCodes": [
+    {
+      "id": 1,
+      "key": "ET001",
+      "value": "Mừng đám cưới",
+      "type": "event"
+    },
+    {
+      "id": 2,
+      "key": "ET002",
+      "value": "Viếng đám ma",
+      "type": "event"
+    },
+    {
+      "id": 3,
+      "key": "ET003",
+      "value": "Thăm người ốm",
+      "type": "event"
+    }
+  ]
+}
